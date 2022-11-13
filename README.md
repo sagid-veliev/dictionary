@@ -1,24 +1,13 @@
-# dictionary
+В разработке тестового задания для компании СимбирСофт использовалась экосистема Vue, Vue, Vue-router.
 
-## Project setup
-```
-npm install
-```
+Выполнено приложения словаря, состоящее из двух страничек. На первой отображается список из искомых слов, на второй страница с избранными словами,
+выбраннами самим юзером. Словарь работает только с англоязычными словами.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Отмечу, что ветку в Git не ввел, так как приложение писал с одного устройства, без особых перерывов. Обычно веду ветку, преимущественно используя git flow.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+При разработке изпользовался Vue версии 3.2.13.
+Node.js - v16.16.0
+АPI словаря - https://dictionaryapi.com/
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

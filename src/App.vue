@@ -1,30 +1,29 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+      <header class="header">
+          <div class="header__container">
+                <h2 class="header__title">
+                    <router-link to="/main">Word Keeper</router-link>
+                </h2>
+                <div class="header__starred">
+                    <div class="header-starred-icon">
+                        <icon-star></icon-star>
+                    </div>
+                    <h2 class="header-starred-text">
+                        <router-link to="/starred">Starred Words</router-link>
+                    </h2>
+                </div>
+          </div>
+      </header>
+      <main class="container">
+        <router-view></router-view>
+      </main>
 </template>
 
+<script setup>
+import IconStar from '@/assets/icons/IconStar.vue';
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import '@/assets/fonts/fonts.scss';
+@import '@/assets/styles/layout.scss';
 </style>

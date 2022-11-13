@@ -1,0 +1,24 @@
+<template>
+    <svg
+        xmlns='http://www.w3.org/2000/svg'
+        height='48'
+        width='48'
+        :fill="props.fill ? '#64B5F6' : 'white'"
+        :stroke="props.stroke"
+    >
+        <path d='m15.6 38.6 2.2-9.6-7.45-6.45 9.85-.9L24 12.6l3.9 9.05 9.75.9L30.2 29l2.3 9.6-8.5-5.1Z'></path>
+    </svg>
+</template>
+
+<script setup>
+const props = defineProps({
+    fill: {
+        type: Boolean,
+        default: false,
+    },
+    stroke: {
+        type: String,
+        default: 'none',
+    },
+});
+</script>
