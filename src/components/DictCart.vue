@@ -34,14 +34,14 @@
                         v-if="index > 0"
                         class="cart-additional-def"
                     >
-                        {{ getDefinitions(item, index) }}
+                        {{ getInformation(item, index) }}
                     </div>
                 </template>
             </template>
             <template v-if="props.phonetic.length">
                 <h4>Transcriptions:</h4>
                 <div v-for="(item, index) in props.phonetic" :key="index">
-                    {{ getPhonetic(item, index + 1) }}
+                    {{ getInformation(item, index + 1) }}
                 </div>
             </template>
         </div>
@@ -110,8 +110,7 @@ const onDragOver = (event) => {
     emit('onDragOver', event);
 };
 
-const getPhonetic = (item, index) => `${index}) ${item})`;
-const getDefinitions = (item, index) => `${index}) ${item}`;
+const getInformation = (item, index) => `${index}) ${item}`;
 
 </script>
 
