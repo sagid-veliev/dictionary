@@ -9,6 +9,7 @@
                     class="list__container"
                 >
                     <dict-word
+                        style="cursor: pointer"
                         v-for="word in starred"
                         :key="word.id"
                         :word="word.word"
@@ -77,7 +78,7 @@ const onDragEnd = (event) => {
 const onDragOver = (event, word) => {
     // отслеживаю, если активное и текущее слово отличаются, то сохраняю изменения в стейт
     if (word.id !== id.value) {
-        store.commit('changeStarred', { word, id });
+        store.commit('changeStarredPos', { word, id });
     }
     const tasksList = document.querySelector('.list__container');
     const activeElement = document.querySelector('.selected');
